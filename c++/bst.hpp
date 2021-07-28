@@ -111,8 +111,8 @@ template <typename F>
 std::pair<Iterator<Node<K,V>, std::pair<const K,V>>, bool> bst<K,V,OP>::_insert(F&& x){
 
 	using iterator = Iterator<Node<K,V>, std::pair<const K,V>>;
-	using const_iterator = Iterator<Node<K,V>,const std::pair<const K, V>>;
-	using pair_type = std::pair<const K, V>;
+	//using const_iterator = Iterator<Node<K,V>,const std::pair<const K, V>>;
+	//using pair_type = std::pair<const K, V>;
 	
 
 	if(!root){
