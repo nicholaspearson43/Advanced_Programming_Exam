@@ -1,4 +1,4 @@
-CXX = c++
+CXX = clang++
 CXXFLAGS = -std=c++14 -g -Wall -Wextra
 
 SRC = main.cpp
