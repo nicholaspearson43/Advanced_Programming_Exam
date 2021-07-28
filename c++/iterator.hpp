@@ -6,7 +6,7 @@
 template <typename node_T, typename O>
 class Iterator{
 	
-	node_T* current; //abbiamo un pointer al nodo in cui sei
+	node_T* current;
 	
 	public:
 	using iterator_category = std::forward_iterator_tag;
