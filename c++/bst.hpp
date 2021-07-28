@@ -16,6 +16,8 @@ class bst{
 	std::unique_ptr<Node<K,V>> root;
 	std::size_t size;
 	OP cmp;
+	
+	
 	Node<K,V>* _copy(Node<K,V>* x, Node<K,V>* dad);
 	
 	template<typename F>
