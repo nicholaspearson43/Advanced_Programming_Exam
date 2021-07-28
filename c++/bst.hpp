@@ -209,7 +209,7 @@ void bst<K,V,OP>::balance() noexcept{
 	for(auto i = begin(); i !=end(); i++){
 		tmp.push_back(*i);
 	}
-	auto _size = size;
+	int _size = size;
 	clear();
 	
 	int blocks=_size/2;
