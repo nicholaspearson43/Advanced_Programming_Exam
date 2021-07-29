@@ -12,10 +12,11 @@ struct Node{
 	//default ctor
 	Node() noexcept =default;
 	//ctor with a key and a value
-	Node(K key, V value) noexcept : elem{std::make_pair(key, value)}, parent{nullptr}, left{nullptr}, right{nullptr}{}
+	Node(K key, V value) noexcept : elem{std::make_pair(std::move(key), std::move(value))}, parent{nullptr}, left{nullptr}, right{nullptr}{}
+	Node(const K& key, const V& value): elem{std::pair<K,V>{key, value}}, parent{nullptr},
 	
 	//ctor with a pair of key and value
-	explicit Node(std::pair<K,V> _elem) noexcept: elem{_elem}, parent{nullptr}, left{nullptr}, right{nullptr} {}
+	explicit Node(std::pair<K,V> _elem) noexcept: elem{std::move(_elem)}, parent{nullptr}, left{nullptr}, right{nullptr} {}
 
 	//ctor with a key, a value and a pointer to its parent
 	Node(K key, V value, Node<K,V>* ptr) noexcept: elem{std::make_pair(key,value)}, parent{ptr}, left{nullptr}, right{nullptr} {}
