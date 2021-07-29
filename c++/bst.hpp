@@ -84,7 +84,7 @@ class bst{
 	}
 	
 	iterator find(const K& x) noexcept {return iterator{_find(x)};}
-	const_iterator find(const K& x) const noexcept {return iterator{_find(x)};}
+	const_iterator find(const K& x) const noexcept {return const_iterator{_find(x)};}
 	
 	
 	
